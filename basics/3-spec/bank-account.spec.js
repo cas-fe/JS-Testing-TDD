@@ -1,5 +1,5 @@
 import { describe, beforeEach, it, expect } from 'vitest'
-import { BankAccount } from '../bank-account'
+import { BankAccount } from './bank-account'
 
 // new bank account test suite
 describe('A new bank account', function() {

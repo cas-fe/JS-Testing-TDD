@@ -34,9 +34,9 @@
 
 ## Exercise / vitest installieren und ausführen
 
-**Tip:** Lesen Sie zuerst die ganze Aufgabe durch, folgen Sie anschliessend den Schritten 1-11.
+**Tip:** Lesen Sie zuerst die ganze Aufgabe durch, folgen Sie anschliessend den Schritten 1-11. Falls Sie VSCode verwenden: Installieren Sie die vitest Extension von https://marketplace.visualstudio.com/items?itemName=vitest.explorer.
 
-1. Laden/Clonen Sie die den Code von [github.com/cas-fe/JS-Testing-TDD](https://github.com/cas-fe/JS-Testing-TDD) auf Ihre lokale Harddisk.
+1. Laden/Clonen Sie die den Code von [github.com/cas-fe/JS-Testing-TDD](https://github.com/cas-fe/JS-Testing-TDD) auf Ihre lokale Harddisk. 
 2. Wechseln Sie ins JS-Testing-TDD Directory und installieren Sie das npm-Paket mittels `npm install`.
 3. Sie finden zusätzliche Informationen über vitest unter:
 	* https://vitest.dev/guide/

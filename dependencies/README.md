@@ -38,9 +38,9 @@ Komponenten, welche von externen, langsamen oder nicht immer verfügbaren Ressou
 
 **Tip:** Lesen Sie zuerst die ganze Aufgabe durch, folgen Sie anschliessend den Schritten 1-7.
 
-1. Schreiben Sie die Test-Spezifikationen (vitest Tests) fürs Szenario *New transaction*: ```A new transaction of $25 (account A $100 / account B $25)...``` (siehe oberhalb). Sie finden die Vorlagen im Ordner `dependencies\1-initial`.
+1. Schreiben Sie die Test-Spezifikationen (vitest Tests im) fürs Szenario *New transaction*: ```A new transaction of $25 (account A $100 / account B $25)...``` (siehe oberhalb). Sie finden die Vorlagen im File ```1-initial/transaction.spec.js```.
 	* Um Werte/Referenzen zu überprüfen, verwenden Sie ```toBe()```; ```toEqual()``` vergleicht zusätzlich die Inhalte von Objekten und Arrays (Properties/Indexes).
-	* Um native APIs, welche immer andere Resultate liefern, testbar zu machen, kann die vitest-Funktion ```spyOn([object], '[key]')``` (z.B. ```spyOn(Date, 'now')```) und ```mockImplementation()``` verwendet werden. Mehr Informationen zu diesen Funktionen finden Sie unter [vitest.dev](https://vitest.dev/api/vi.html#vi-spyon).
+	* Um native APIs, welche immer andere Resultate liefern, testbar zu machen, kann die vitest-Funktion ```spyOn([object], '[key]')``` (z.B. ```vi.spyOn(Date, 'now')```) und ```mockImplementation()``` verwendet werden. Mehr Informationen zu diesen Funktionen finden Sie unter [vitest.dev](https://vitest.dev/api/vi.html#vi-spyon).
 	* Die Klasse ```BankAccount``` entspricht einem DoC. Legen Sie also eine Fake-Klasse für das DoC ```BankAccount``` an. Verwenden Sie dieselbe API (withdraw/deposit) wie in den Basics-Aufgaben.
 	* Die Lösungen zur Aufgabe 1 finden Sie unter ```2-spec/transaction.spec.js```.
 2. Führen Sie die Tests mittels vitest aus (analog [bascis](../basics/README.md#exercise--vitest-installieren-und-ausführen)-Aufgabe), zum Beispiel:
@@ -52,7 +52,7 @@ Komponenten, welche von externen, langsamen oder nicht immer verfügbaren Ressou
 5. Schreiben Sie nun den ersten Test für das zweite (verschachtelte) Szenario ```when executed```.
 	* Der Test muss nun fehlschlagen.
 	* Implementieren Sie nun die ```execute()```-Funktion der Transaction-Klasse:
-		* Um die ```withdraw()``` der Funktion der ```BankAccountFake```-Klasse zu überschreiben, können Sie ebenfalls die vitest-Funktion [spyOn()](https://vitest.dev/api/vi.html#vi-spyon) verwenden.
+		* Um die ```withdraw()``` der Funktion der ```BankAccountFake```-Klasse zu überschreiben, können Sie ebenfalls die vitest-Funktion [vi.spyOn()](https://vitest.dev/api/vi.html#vi-spyon) verwenden.
 	* Nun sollte der Test ohne Fehler durchlaufen.
 6. Implementieren Sie nun die weiteren Anforderungen des Szenarios ```when executed``` analog der Vorgehensweise unter Punkt 5. 
 7. Vergleichen Sie das Vorgehen von Punkt 1 mit Punkt 5: Warum macht es keinen Sinn, zuerst sämtliche Test-Spezifikationen und erst anschliessend die gesamte Transaction-Logik zu implementieren?
@@ -61,5 +61,5 @@ Komponenten, welche von externen, langsamen oder nicht immer verfügbaren Ressou
 ## Solution
 
 * Test-Spezifikationen: [4-spec-completion/transaction.spec.js](./4-spec-completion/transaction.spec.js)
-* `Transaction`-Klasse: [5-solution/transaction.js](./5-solution/transaction.js)
-* Frage 7: Siehe [5-solution/transaction.spec.js](./5-solution/transaction.spec.js)
+* `Transaction`-Klasse: [5-solution/transaction.js](./transaction.js)
+* Frage 7: Siehe [5-solution/transaction.spec.js](./5-solution/transaction.spec_.js)
