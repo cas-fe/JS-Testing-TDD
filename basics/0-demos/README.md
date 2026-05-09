@@ -1,0 +1,68 @@
+# What happens without testing?
+
+
+## A short Story first
+
+1. BankAccount implementation see [bank-account.js](../1-initial/bank-account.js)
+2. BankAccount usage see [main.js](../1-initial/main.js) or:
+	```javascript
+	// .../CAS-FEE/HSR.CAS-FEE.Testing/basics $
+	import { BankAccount } from './1-initial/bank-account'
+
+	let account  = new BankAccount()
+	// create account
+	// undefined
+
+	account.balance
+	// 0
+
+	account.deposit(150)
+	// Deposit 150. Balance 150.
+	// true
+
+	account.withdraw(50)
+	// Withdraw of 50 failed.
+	// false
+
+	account.withdraw(10)
+	// Withdraw 10. Balance 140.
+	// true
+	```
+
+3. Refactoring of the return statement (make it more readable) -> [bank-account.js](./2-refactoring/bank-account.js):
+	```javascript
+	hasTooLessCredit(amount) {
+		return
+			this.balance < Math.abs(amount) ||
+			amount > this.balance * this.maximalWithdrawFactor
+	}
+	```
+
+4. Reactoring broke the functionality -> [main.js](./2-refactoring/main.js) or:
+	```javascript
+	// .../CAS-FEE/HSR.CAS-FEE.Testing/basics $
+	import { BankAccount } from './2-refactoring/bank-account'
+	// undefined
+
+	let account = new BankAccount()
+	// create account
+	// undefined
+
+	account.balance
+	// 0
+
+	account.deposit(50)
+	// Deposit 50. Balance 50.
+	// true
+
+	account.withdraw(20)
+	// Withdraw 50. Balance -20.
+	// true
+	```
+
+	The compiler will insert a semicolon after `return <-'` (See `empty statement` and `semicolon insertion` in JavaScript).
+
+
+## How to do it better?
+
+Test Driven Design: Write **tests/specs** first, then implement the functionality.

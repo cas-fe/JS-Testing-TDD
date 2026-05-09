@@ -1,0 +1,41 @@
+export class BankAccount {
+	constructor() {
+		this.maximalWithdrawFactor = 0.25
+		this.balance = 0
+	}
+
+	deposit(amount) {
+		this.balance += amount
+		return true
+	}
+
+	withdraw(amount) {
+		if (amount > 0 && !this.hasTooLessCredit(amount)) {
+			this.balance -= amount
+			return true
+		} else {
+			return false
+		}
+	}
+
+	hasTooLessCredit(amount) {
+		return this.balance < Math.abs(amount) || amount > this.balance * this.maximalWithdrawFactor
+	}
+
+	/* 2-refactoring:
+	hasTooLessCredit(amount) {
+		return
+			this.balance < Math.abs(amount) ||
+			amount > this.balance * this.maximalWithdrawFactor
+	}
+	*/
+
+	/* 4-solution:
+	hasTooLessCredit(amount) {
+		return (
+			this.balance < Math.abs(amount) ||
+			amount > this.balance * this.maximalWithdrawFactor
+		)
+	}
+	*/
+}
