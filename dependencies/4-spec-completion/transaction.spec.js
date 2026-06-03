@@ -7,7 +7,7 @@ describe('A new transaction of $25', function() {
 	let transaction
 
 	beforeEach(function() {
-		// Methodstub for Date.now()
+		// mockImplementation for Date.now()
 		vi.spyOn(Date, 'now').mockImplementation(() => new Date('2026-05-22T09:49:51.010Z'));
 
 		// Bank account fake

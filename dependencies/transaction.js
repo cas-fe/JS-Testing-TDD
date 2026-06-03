@@ -1,5 +1,3 @@
-'use strict';
-
 /* 1-initial: */
 export class Transaction {
 
@@ -17,17 +15,17 @@ export class Transaction {
 
 	/* 5-solution:
 	constructor(accountA, accountB, amount) {
-		this.accountA = accountA;
-		this.accountB = accountB;
-		this.date = Date.now();
-		this.amount = amount;
-		this.completed = false;
+		this.accountA = accountA
+		this.accountB = accountB
+		this.date = Date.now()
+		this.amount = amount
+		this.completed = false
 	}
 
 	execute() {
-		this.accountA.withdraw(this.amount);
-		this.accountB.deposit(this.amount);
-		this.completed = true;
+		this.accountA.withdraw(this.amount)
+		this.accountB.deposit(this.amount)
+		this.completed = true
 	}
 	*/
 };
