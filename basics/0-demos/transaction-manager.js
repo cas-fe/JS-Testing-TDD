@@ -1,7 +1,15 @@
 export class TransactionManager {
-    constructor() {
-    }
-};
+
+}
+
+
+
+
+
+
+
+
+
 
 
 

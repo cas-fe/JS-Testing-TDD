@@ -8,8 +8,8 @@ import { BankAccount } from '../bank-account'
  * 3. Implement feature & run tests again until they pass
  */
  
- // 100$ bank account test suite
-describe('A bank account with balance of 100$', function() {
+ // $100 bank account test suite
+describe('A bank account with balance of $100', function() {
 	let account
 
 	beforeEach(function() {
@@ -17,7 +17,7 @@ describe('A bank account with balance of 100$', function() {
 		account.balance = 100
 	})
 
-	it('should return false when withdraw of balance lower than or equals 0$', function() {
+	it('should return false when withdraw of balance lower than or equals $0', function() {
 		expect(account.withdraw(0)).toBeFalsy()
 	})
 	

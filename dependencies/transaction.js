@@ -15,7 +15,7 @@ export class Transaction {
 	}
 	*/
 
-	/* 5-solution: */
+	/* 5-solution:
 	constructor(accountA, accountB, amount) {
 		this.accountA = accountA;
 		this.accountB = accountB;
@@ -29,4 +29,5 @@ export class Transaction {
 		this.accountB.deposit(this.amount);
 		this.completed = true;
 	}
+	*/
 };

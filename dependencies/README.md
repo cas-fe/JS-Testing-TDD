@@ -24,7 +24,7 @@
 **describe**… "A new transaction of $25 (from account A $100 to account B $25)"
 * it … "has an amount of $25"
 * it … "is not yet completed"
-* it … "has transaction date 2021-06-22T09:49:51.010Z"
+* it … "has transaction date 2026-05-22T09:49:51.010Z"
 
 * **describe**… "when executed"
     * it … "withdraws $25 from account A"

@@ -1,14 +1,14 @@
 import { Transaction } from '../transaction'
 import { describe, beforeEach, it, expect, vi } from 'vitest'
 
-describe('A new transaction of 25$', function() {
+describe('A new transaction of $25', function() {
 	let accountA
 	let accountB
 	let transaction
 
 	beforeEach(function() {
 		// Methodstub for Date.now()
-		vi.spyOn(Date, 'now').mockImplementation(() => new Date('2021-06-22T09:49:51.010Z'));
+		vi.spyOn(Date, 'now').mockImplementation(() => new Date('2026-05-22T09:49:51.010Z'));
 
 		// Bank account fake
 		const BankAccountFake = class {
@@ -21,8 +21,8 @@ describe('A new transaction of 25$', function() {
 		transaction = new Transaction(accountA, accountB, 25)
 	})
 
-	it('has transaction date 2021-06-22T09:49:51.010Z', function() {
-		expect(transaction.date).toEqual(new Date('2021-06-22T09:49:51.010Z'))
+	it('has transaction date 2026-05-22T09:49:51.010Z', function() {
+		expect(transaction.date).toEqual(new Date('2026-05-22T09:49:51.010Z'))
 	})
 
 	it('has an amount of 25', function() {

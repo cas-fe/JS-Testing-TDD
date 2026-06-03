@@ -18,6 +18,11 @@ describe('A new transaction manager', function() {
 
 
 
+
+
+
+
+
 /*--- TODO (DEMO)
     let transactionMgr
     beforeEach(function() {
